@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;900&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+/*Header, menu, logo*/
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding:100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:#ffffff;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__img{
+	position: relative;
+	max-width: 80px;
+}
+
+.header__ul{
+	position: relative;
+	display: flex;
+}
+
+.header__ul li{
+	list-style: none;
+}
+
+.header__ul a{
+	display: inline-block;
+	color: #ffffff;
+	font-weight: 400;
+	margin-left: 40px;
+	text-decoration: none;
+	
+}
+
+.header__ul a:hover{
+	border-bottom: 2px solid;
+	transition: 0.3s;
+}
+
+/*Main, imagen, texto*/
+
+.main{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main__div{
+	position: relative;
+	max-width: 600px;
+}
+
+.main__div h2{
+	color: #333;
+	font-size: 3.8em;
+	line-height: 1em;
+	font-weight: 500;
+}
+
+.main__div span{
+	color: #FFC72C;
+	font-size: 1.2em;
+	font-weight: 900;
+}
+
+.main__div p{
+	color: #333;
+}
+
+.main__div a{
+	display: inline-block;
+	margin-top: 20px;
+	padding:8px 20px;
+	background: #FFC72C;
+	color: #ffffff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+.main__div a:hover{
+	background: #ffffff;
+	color: #ffc72c;
+	border-color:#ffc72c; 
+	border:1px solid;
+}
+
+.main__div2{
+	width: 600px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	margin-top: 50px;
+}
+
+.main__img{
+	max-width: 340px;
+	padding-left: 30px;
+}
+
+/*ul,imagenes de combos*/
+
+
+.ul{
+	position: absolute;
+	left: 50%;
+	padding-top: 40px;
+	bottom: 20px;
+	transform: translateX(-50%);
+	display: flex;
+	object-fit: cover;
+}
+
+.ul li{
+	list-style: none;
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.5%;
+	margin: 3px;
+}
+
+.ul li:hover{
+	transform: translateY(-15px);
+}
+
+.ul img{
+	width: 80px;
+	height: 80px;
+	border-radius: 7px;
+	object-fit: cover;
+}
+
+.social-media{
+	position: absolute;
+	top: 40%;
+	right: 20px;
+	transform: translateY(-30%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.social-media li{
+	list-style: none;
+}
+
+.social-media i{
+	display: inline-block;
+	margin:5px 0;
+	transform: scale(0.6);
+	filter: invert(1);
+}
+
+.div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:#FFC72C;
+	clip-path: circle(600px at right 300px);
+}
+
+@media screen and (max-width: 767px){
+	header{
+		padding: 20px;
+	}
+	.header__img{
+		max-width: 60px;
+	}
+
+	.header__ul{
+		display: none;
+	}
+
+	.header__ul a{
+		font-size: 30px;
+		font-weight: 300;
+		margin: 15px 0;
+		color:#000000;
+	}
+
+	.header__ul a:hover{
+	border-bottom: 2px solid;
+	transition: 0.3s;
+	color:#000000;
+	}
+
+	.header__div{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		background: url(bars-solid.svg);
+		background-size: 30px;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 11;
+	}
+
+	.header__div.active{
+		background: url(x-solid.svg);
+		background-size: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: fixed;
+		right: 20px;
+	}
+
+	.header__ul.active{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height:100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background:#ffffff;
+		z-index: 10;
+	}
+	section{
+		padding:20px 20px 120px;
+	}
+
+	.main{
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+	.main__div h2{
+		font-size: 2.5em;
+		margin-bottom: 15px;
+	}
+
+	.main__div{
+		max-width: 100%;
+	}
+
+	.main__div a:{
+	background: #ffffff;
+	color: #ffc72c;
+	border-color:#ffffff; 
+	border:1px solid;
+}
+	
+	.main__div2{
+		max-width: 100%;
+		justify-content: center;
+	}
+
+	.main__div2 img{
+		max-width: 250px;
+	}
+
+	.ul img{
+		max-width: 50px;
+	}
+
+	.div{
+		clip-path: circle(300px at center bottom);
+	}
+}
+
+
+
+
